@@ -3,13 +3,94 @@
   padding: 0;
 }
 
-.myBox {
-  width: 200px;
-  background-color: red;
+:root {
+  --main-color: rgb(109, 32, 32);
 }
+
+.myBox {
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  position: relative;
+  background-color: var(--main-color);
+
+
+  /* Give it  */
+  /* margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto; */
+
+  display: flex;
+  flex-direction: row;
+
+  /* flex-wrap: wrap; */
+}
+
+.innerBox {
+  margin: 10px;
+  background-color: var(--main-color);
+}
+
+/* .hold-size {
+  flex: 0 0 1000px;
+} */
+
+.badge {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* .badge {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  top: -20px;
+  right: -20px;
+} */
+
+/* .innerBox:first-child {
+  background-color: aqua;
+}
+
+.innerBox:nth-child(3n) {
+  background-color: bisque;
+}
+
+
+.myBox span:first-of-type {
+  background-color: green;
+} */
+
 
 /* .innerBox {
   width: 100%;
   height: 100%;
   background-color: blue;
 } */
+
+@media only screen and (max-width: 600px) {
+  .myBox {
+    background-color: rgb(28, 97, 120);
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .myBox {
+    background-color: red;
+  }
+}
